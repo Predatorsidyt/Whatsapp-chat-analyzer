@@ -2,7 +2,7 @@ import re
 import pandas as pd
 
 def preprocess(data):
-    pattern = 'r'\3/\1/\2, \4:\5 \r\nAM' if int(re.group(4)) < 12 else 'PM''
+    pattern = 'r'3\1\2, 4:5 \r\nAM' if int(re.group(4)) < 12 else 'PM''
 
     messages = re.split(pattern, data)[1:]
     dates = re.findall(pattern, data)
